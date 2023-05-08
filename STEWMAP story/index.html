@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>STEWMAP Storytelling Visualization</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="stylesheet" href="  https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" /> -->
+  <link rel="stylesheet" href="bootstrap.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <style>
+    .backgroundcolor {
+      border-radius: 25px;
+      background: #cfcfcf;
+      padding: 40px;
+    }
+
+    .recognize1 {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .bottomLink {
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 700;
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <script type="text/javascript">
+    window.PlotlyConfig = { MathJaxConfig: "local" };
+  </script>
+  <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.20.0.min.js"></script>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="search" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="banner">
+
+  </div>
+
+
+  <div class="container" style="margin-top:30px">
+    <div class="row">
+      <div class="col-sm-12 mx-auto">
+        <br>
+        <img class="recognize1" src="img/Presentation.png" alt="presentation" width="450"></a>
+        <br>
+        <figure class="text-center">
+          <blockquote class="blockquote">
+            <h3>Project Summary
+            </h3>
+          </blockquote>
+        </figure>
+
+        <br>
+        <p>
+          Stewardship is defined as the activity or job of protecting, taking care of, or being responsible for
+          something.
+          Pratt SAVI (Spatial Analysis and Visualization Initiative) lab is working with the STEW-MAP,
+          They strive to help their community-based partners further their mission with data.
+          The STEW-MAP dataset includes information on the location, scope, and activities of local organizations
+          involved in stewardship and environmental work in New York City. It also provides details on the primary
+          focus, organizational function, and work site of these organizations.
+        </p>
+        <br>
+        <p>
+          Since I moved to NYC, I started to be interested in the environment and community health performance due to
+          the large number of people in the city. I came across the STEW-MAP project, which involved collaboration with
+          Pratt as one of the participating organizations. The large quantity of data presented in the dataset prompts
+          me to question whether the organizations listed in STEW-MAP truly have an impact on the state of the
+          environment and the overall health of the community.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="background-color: #E8F7EF;">
+    <div class="container" style="margin-top:30px">
+      <div class="row">
+        <div class="col-sm-12 mx-auto">
+          <br>
+          <img class="recognize1" src="img/Pioneer.png" alt="pioneer" width="450"></a>
+          <br>
+          <figure class="text-center">
+            <blockquote class="blockquote">
+              <h3>What's our goal?
+              </h3>
+            </blockquote>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container" style="margin-top:30px;">
+      <div class="row">
+        <div class="col-sm-4 mx-auto">
+          <img class="recognize1" src="img/1.svg" alt="numberOne" width="20"></a>
+          <br>
+          <br>
+          <p>
+
+            Explore the impact of local organizations on environmental performances and community health outcomes.
+
+          </p>
+        </div>
+
+        <div class="col-sm-4 mx-auto">
+          <img class="recognize1" src="img/2.svg" alt="numberTwo" width="28"></a>
+          <br>
+          <br>
+          <p>
+
+            If knowing history, location and information sharing information, would it possible to predict the budget
+            level of an organization?
+          </p>
+        </div>
+
+        <div class="col-sm-4 mx-auto">
+          <img class="recognize1" src="img/3.svg" alt="numberThree" width="28"></a>
+          <br>
+          <br>
+          <p>
+
+            Potential to inform policy decisions and community initiatives aimed at improving environmental and
+            community health outcomes in New York City
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+
+
+  <div class="container" style="margin-top:30px">
+    <div class="row">
+      <div class="col-sm-12 mx-auto">
+        <figure class="text-center">
+          <blockquote class="blockquote">
+            <br>
+            <h3>STEW-MAP Project in New York
+            </h3>
+          </blockquote>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="container" style="margin-top:30px;">
+    <div class="row">
+      <div class="col-sm-6 mx-auto">
+        <br>
+        <p>
+
+          STEW-MAP supports government and civic groups alike to effectively coordinate and collaborate, to identify
+          opportunities to better engage New Yorkers in caring for the environment, and to enhance the capacity of the
+          stewards of our communities. This tool can support civic participation, increase neighborhoods’ social
+          cohesion, and support requests for funding and programming.
+          The first ever STEW-MAP survey was completed in NYC in 2007. Since the publication of the data, STEW-MAP has
+          been used in NYC to support civic participation, increase neighborhoods’ social cohesion, and support requests
+          for funding and programming. In 2015, STEW-MAP was replicated for waterfront-focused stewardship groups in the
+          New York Harbor area, in collaboration with the Hudson River Foundation/Harbor Estuary Project (HRF/HEP).
+          In 2017, STEW-MAP was replicated in the New York City Region. This study was expanded to include the entire
+          greater metropolitan area and added “transform” as a function. In this study, 55 partners served as data
+          providers and 847 respondents were included in the research results. The data collected in the 2017 survey can
+          be explored visually and spatially on the online map and dashboard.
+
+        </p>
+      </div>
+
+      <div class="col-sm-6 mx-auto">
+        <br>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                Organizational Characteristics
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>STEW-MAP provides information about the
+                  organizational characteristics of each group including year founded, mission, primary work sites,
+                  services offered, budgets and staff.</strong> At the same time, STEW-MAP allows you to better
+                understand how each
+                group functions through their expressed goals, impacts and modes of communication.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Geographic Turf
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>STEW-MAP displays the area of activity, or
+                  ‘stewardship turf,’ of each group.</strong> Stewardship turf could be an entire park, a forest patch,
+                or a
+                watershed. These geographic data can demonstrate the overlaps and gaps in stewardship capacity across a
+                landscape and can be analyzed in concert with demographic and environmental characteristics of
+                communities.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Networks
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>STEW-MAP displays a group’s social network to
+                  understand how civic environmental organizations are connected. </strong> This enables us to examine
+                the structure
+                and function of environmental stewardship across a city or region. From social network analyses, we can
+                assess which organizations are operating as brokers of information, funding, and services; the role of
+                government in relation to these civic stewardship organizations; and which organizations are more
+                isolated than others. Practitioners can use these data points to understand who is working in a given
+                region and what their assets are; this can improve outcomes for many applications, at multiple scales. A
+                sample listing includes:
+                <ul>
+                  <li> Community outreach & dialogue
+                  </li>
+                  <li> Citizen science & environmental education
+                  </li>
+                  <li> Stream & forest restoration projects
+                  </li>
+                  <li> Community gardening & urban agriculture
+                  </li>
+                  <li> Park maintenance & planning
+                  </li>
+                  <li> Disaster preparedness & recovery
+                  </li>
+                  <li> Invasive species monitoring & management
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <br>
+  <div class="container" style="margin-top:30px;">
+    <div class="row">
+      <div class="col-sm-6 mx-auto">
+        <br>
+        <img class="recognize1" src="img/community.png" alt="community" width="600"></a>
+
+      </div>
+
+      <div class="col-sm-6 mx-auto">
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-sm-1">
+            <img class="recognize1" src="img/1.svg" alt="numberOne" width="20"></a>
+          </div>
+          <div class="col-sm-5" style="flex: 2;">
+            <p>
+              STEW-MAP includes 720 groups with a combined budget of $5,301,875,991 and a total of approximately 633,000
+              people engaged as staff, volunteers, and members. Explore some of our findings below:
+
+            </p>
+          </div>
+        </div>
+        <br>
+
+        <div class="row">
+          <div class="col-sm-1">
+            <img class="recognize1" src="img/2.svg" alt="numberTwo" width="28"></a>
+          </div>
+          <div class="col-sm-5" style="flex: 2;">
+            <p>
+              STEW-MAP includes 720 groups with a combined budget of $5,301,875,991 and a total of approximately 633,000
+              people engaged as staff, volunteers, and members. Explore some of our findings below:
+
+            </p>
+          </div>
+        </div>
+        <br>
+
+        <div class="row">
+          <div class="col-sm-1">
+            <img class="recognize1" src="img/3.svg" alt="numberThree" width="28"></a>
+          </div>
+          <div class="col-sm-5" style="flex: 2;">
+            <p>
+              Stewardship is one of the ways that NYC communities respond to disturbances and stressors such as climate
+              change, extreme weather, disinvestment and gentrification. This pattern has repeated over time here in New
+              York City, with stewardship groups forming in response to the fiscal crisis of the 1970s, September 11th,
+              Hurricane Sandy, and most recently, the COVID-19 crisis.
+
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+  <br>
+
+
+  <div style="background-color: #E8F7EF;">
+    <br>
+    <div class="container" style="margin-top:30px">
+      <div class="row">
+        <div class="col-sm-12 mx-auto">
+          <figure class="text-center">
+            <blockquote class="blockquote">
+              <br>
+              <h3>What data do I need?
+              </h3>
+            </blockquote>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container" style="margin-top:30px;">
+      <div class="row">
+        <div class="col-sm-6 mx-auto">
+          <br>
+          <p>
+            download - STEW-MAP dataset: The STEW-MAP dataset will provide us with information on the location, scope,
+            and
+            activities of local organizations, including their primary focus, organizational function, and work site. 
+            Under this project’s scope, we’ll use primary focus and location,
+          </p>
+          <br>
+          <p>
+            collect via SODA API - New York OpenData Air Quality: The datasets combined of different types of pollutant
+            emissions, levels of exposure, and population vulnerability. These indicators provide a perspective of
+            environmental outcome across time.
+          </p>
+          <br>
+          <p>
+            download - DATA2GO.NYC dataset: ... provides information on various health and environmental indicators
+            across
+            different neighborhoods in New York City. It includes data on air quality, noise complaints, public parks
+            and
+            recreation spaces, recycling rates, water system complaints, and health outcomes such as cancer deaths,
+            drug-related hospitalizations, infant mortality, and obesity rates.
+          </p>
+
+        </div>
+
+        <div class="col-sm-6 mx-auto">
+          <br>
+          <img class="recognize1" src="img/datasets.png" alt="datasets" width="550"></a>
+        </div>
+
+
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+  <br>
+
+  <div class="container" style="margin-top:30px">
+    <div class="row">
+      <div class="col-sm-12 mx-auto">
+        <figure class="text-center">
+          <blockquote class="blockquote">
+            <br>
+            <h3>What would affect STEW-MAP organizations’ budget?
+            </h3>
+          </blockquote>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="container" style="margin-top:30px;">
+    <div class="row">
+      <div class="col-sm-6 mx-auto">
+        <br>
+        <p>
+          Does funding year affect the level of budget? How?
+        </p>
+        <br>
+        <p>
+          Does location affect the level of budget? Which borough will have the high level budget organization?
+        </p>
+        <br>
+        <p>
+          Will posting on social media affect the level of budget?
+        </p>
+      </div>
+
+      <div class="col-sm-6 mx-auto">
+        <br>
+        <img class="recognize1" src="img/decision_tree.jpeg" alt="tree" width="550"></a>
+      </div>
+
+
+    </div>
+    <br>
+  </div>
+
+
+  <div style="background-color: #101F16;">
+    <div class="container" style="margin-top:30px">
+      <div class="row">
+        <div class="col-sm-12 mx-auto">
+          <figure class="text-center">
+            <blockquote class="blockquote">
+              <br>
+              <br>
+              <h3 style="color: #FFF;">How communication affect organization's scale?
+              </h3>
+            </blockquote>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container" style="margin-top:30px;">
+      <div class="row">
+        <div class="col-sm-4 mx-auto">
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-sm-1">
+              <img class="recognize1" src="img/1.svg" alt="numberOne" width="20"></a>
+            </div>
+            <div class="col-sm-3" style="flex: 2;">
+              <p style="color: #FFF;">
+                Social media advertising attracts more volunteers to involve in the non-profit events.
+
+              </p>
+            </div>
+          </div>
+          <br>
+
+          <div class="row">
+            <div class="col-sm-1">
+              <img class="recognize1" src="img/2.svg" alt="numberTwo" width="28"></a>
+            </div>
+            <div class="col-sm-3" style="flex: 2;">
+              <p style="color: #FFF;">
+                Networks?
+
+              </p>
+            </div>
+          </div>
+          <br>
+
+          <div class="row">
+            <div class="col-sm-1">
+              <img class="recognize1" src="img/3.svg" alt="numberThree" width="28"></a>
+            </div>
+            <div class="col-sm-3" style="flex: 2;">
+              <p style="color: #FFF;">
+                Budget?
+                Budget?download - DATA2GO.NYC dataset: ... provides information on various health and environmental
+                indicators across different neighborhoods in New York City. It includes data on air quality, noise
+                complaints, public parks and recreation spaces, recycling rates, water system complaints, and health
+                outcomes such as cancer deaths, drug-related hospitalizations, infant mortality, and obesity rates.
+
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="col-sm-8 mx-auto" style="height:500px">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-touch="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div id="51d3fcc6-34a5-479a-9152-fd2ed7fcd847" class="plotly-graph-div"
+                  style="height: 100%; width: 100%">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div id="8d7c5bcb-db44-477d-8cc2-ac98a1d1d5ca" class="plotly-graph-div"
+                  style="height: 100%; width: 100%"></div>
+              </div>
+              <div class="carousel-item">
+                <div id="f0843805-a17c-40e5-b926-f278fcfabb73" class="plotly-graph-div"
+                  style="height: 100%; width: 100%"></div>
+              </div>
+              <div class="carousel-item">
+                <div id="fa808d9c-1ed1-460d-a0fc-785b40204a58" class="plotly-graph-div"
+                  style="height: 100%; width: 100%"></div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 mx-auto">
+          <br>
+          <br>
+          <img class="recognize1" src="img/twitter1.png" alt="twitter" width="720"></a>
+          <br>
+        </div>
+
+        <div class="col-sm-6 mx-auto">
+          <br>
+          <br>
+          <img class="recognize1" src="img/twitter2.png" alt="twitter" width="470"></a>
+          <br>
+
+
+        </div>
+      </div>
+
+    </div>
+    <br>
+  </div>
+
+
+  <div style="background-color: #3B200B;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 mx-auto">
+          <figure class="text-center">
+            <blockquote class="blockquote">
+              <br>
+              <br>
+              <h3 style="color: #FFF;">Does the contribution from STEW-MAP organization have solid impact in NYC?
+              </h3>
+            </blockquote>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container" style="margin-top:30px;">
+      <div class="row">
+        <div class="col-sm-4 mx-auto">
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-sm-1">
+              <img class="recognize1" src="img/1.svg" alt="numberOne" width="20"></a>
+            </div>
+            <div class="col-sm-3" style="flex: 2;">
+              <p style="color: #FFF;">
+                No obvious correlation between fine particulate matters and the number of organizations in New York
+                City.&nbsp;&nbsp;
+              <p class="text-warning">PM 2.5 stays similar across all boroughs.</p>
+
+              </p>
+            </div>
+          </div>
+          <br>
+
+          <div class="row">
+            <div class="col-sm-1">
+              <img class="recognize1" src="img/2.svg" alt="numberTwo" width="28"></a>
+            </div>
+            <div class="col-sm-3" style="flex: 2;">
+              <p style="color: #FFF;">
+                We can say because of the Nitrogen Dioxide concentration is higher in Manhattan and Brooklyn which
+                indicate a certain level of environmental issue, hence, there are more STEW-MAP organizations.
+              <p class="text-warning">Potential - to establish more organizations in Staten Island.</p>
+
+              </p>
+            </div>
+          </div>
+          <br>
+
+          <div class="row">
+            <div class="col-sm-1">
+              <img class="recognize1" src="img/3.svg" alt="numberThree" width="28"></a>
+            </div>
+            <div class="col-sm-3" style="flex: 2;">
+              <p style="color: #FFF;">
+                Data shows that
+
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="col-sm-8 mx-auto" style="height:500px">
+          <div id="carouselExampleControls2" class="carousel slide" data-bs-touch="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div id="6bd1d6d1-f446-4f86-87ff-c0e4a7a34ca9" class="plotly-graph-div"
+                  style="height: 100%; width: 100%">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div id="b09385d3-2542-4324-a40d-2fb313b94a95" class="plotly-graph-div"
+                  style="height: 100%; width: 100%">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon right-arrow" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+    <br>
+  </div>
+
+  <div style="background-color: #3B200B;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 mx-auto">
+          <figure class="text-center">
+            <blockquote class="blockquote">
+              <br>
+              <br>
+              <h3 style="color: #FFF;">Observation & Insights
+              </h3>
+            </blockquote>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container" style="margin-top:30px;">
+      <div class="row">
+        <div class="col-sm-6 mx-auto">
+          <br>
+          <br>
+          <div class="row">
+            <img class="recognize1" src="img/poverty.png" alt="poverty" width="28"></a>
+          </div>
+          <br>
+        </div>
+
+        <div class="col-sm-6 mx-auto">
+          <br>
+          <br>
+          <div class="row">
+            <img class="recognize1" src="img/jobs.png" alt="jobs" width="28"></a>
+          </div>
+          <br>
+
+
+        </div>
+      </div>
+
+    </div>
+    <br>
+
+    <div class="container" style="margin-top:30px;">
+      <div class="row">
+        <div class="col-sm-12 mx-auto">
+          <br>
+          <br>
+          <p>sdfsdfsdfsdfsdfds</p>
+        </div>
+        <br>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Finally add another jumbtron for footer -->
+
+  <div class="jumbotron text-center" style="margin-bottom:0;background-color: ;">
+    <br>
+    <br>
+    <p>Created for STEWMAP Data Storytelling using Bootstrap 5 by Sharon Yuxin Tao. <br> Contact at:<a
+        href="mailto:someone@example.com">
+        ytao6@pratt.edu</a> </p>
+    <br>
+
+  </div>
+
+
+  <script type="text/javascript" src="plots/fig11.js"></script>
+  <script type="text/javascript" src="plots/fig12.js"></script>
+  <script type="text/javascript" src="plots/fig13.js"></script>
+  <script type="text/javascript" src="plots/fig14.js"></script>
+  <script type="text/javascript" src="plots/fig2.js"></script>
+  <script type="text/javascript" src="plots/fig3.js"></script>
+
+
+
+  <!-- <script type="text/javascript">
+
+    const myCarouselElement = document.querySelector('#test1')
+    const carousel = new bootstrap.Carousel(myCarouselElement, {
+      interval: 2000,
+      wrap: false
+    })
+  </script> -->
+
+</body>
+
+</html>
